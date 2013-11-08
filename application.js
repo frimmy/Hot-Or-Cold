@@ -12,7 +12,10 @@ $(function () {
                 alert("Congrats! You win.");
                 wrong=false;
 
-            } else if(prev_guess!= null) {
+            } else if (guess == prev_guess) {
+                alert("You just guessed that number..");
+            }
+            else if(prev_guess!= null) {
                 
                 if (Math.abs(answer-guess) < Math.abs(answer - prev_guess)) {
                     alert("You're getting warmer!");
@@ -20,7 +23,7 @@ $(function () {
                     alert("You're getting colder!");
                 }
             }
-            
+
             else if(guess>answer) {
                 alert("Too high!");
             } else {
