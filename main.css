@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	height: 100%;
+	font: normal 12px/14px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+
+@font-face {
+	font-family: 'CrimsonSemibold';
+	src: local('CrimsonSemibold'), url("CrimsonSemibold.otf") format("opentype");
+	/*font-weight: bold;*/
+}
+/*header*/
+
+nav {
+	height: auto;
+	padding: 10px;
+	margin: 15px 25px;
+}
+	nav div {
+		display: block;
+		float: left;
+	}
+
+	nav ul {
+		height: 15px;
+		width: auto;
+	}
+	nav li {
+		display: inline;
+		height: auto;
+		width: auto;
+		padding: 0 10px;
+	}
+
+	#greeting {
+		position: relative;
+		color: #999999;
+		height: auto;
+		width: auto;
+		float: left;
+		display: inline;
+	}
+
+	#navbar-right {
+		position: relative;
+		float: right;
+		margin: 0 20px;
+		display:block;
+	}
+
+	a:link,a:visited {
+		color:#369;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color:#66a5da;
+	}
+
+	#sign-in a{
+		color: #66a5da;
+	}
+
+	#sign-in a:hover {
+		color: #369;
+	}
+header {
+	min-height: 275px;
+}
+
+header img {
+	display: block;
+	padding: 5px;	
+	margin: 10px auto;
+	position: relative;
+	top: 20px;
+}
+
+header h1, header h3, .fixed-ref h1, .fixed-ref h3{
+	text-align: center;
+}
+
+	header h1, .fixed-ref h1 {
+		clear: both;
+		display: block;
+		height: auto;
+		width: 925px;
+		margin: 20px auto;
+		padding: 5px;
+		font: 58px/58px 'CrimsonSemibold', 'Times New Roman', Georgia, serif;
+		text-align: center;
+		letter-spacing: -2px;
+		line-height: 1.0em;
+	}
+
+	header h3, .fixed-ref h3 {
+		font: 20px serif;
+	}
+
+
+#modal {
+	max-width: 925px;
+	margin: auto; 
+}
+
+
+/*Content div*/
+div#content {
+	width: 780px;
+	margin: 10px auto;
+}
+
+	.product-boxes {
+		margin: 15px 0 0 40px;
+	}
+
+
+		
+	div.product-boxes .box {
+		display: inline-block;
+		border: 1px solid #e8e8e8;
+		width: 160px;
+		height: 210px;
+		margin: 20px 20px;
+		border-radius: 5px;
+		padding: 15px 10px; 
+		text-align: center;	
+		background: #ffffff; /* Old browsers */
+		background:    -moz-linear-gradient(top, #ffffff 0%, #efefef 99%); /* FF3.6+ */
+		background: 	    webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(99%,#efefef)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 99%); /* Chrome10+,Safari5.1+ */
+		background:      -o-linear-gradient(top, #ffffff 0%,#efefef 99%); /* Opera 11.10+ */
+		background:     -ms-linear-gradient(top, #ffffff 0%,#efefef 99%); /* IE10+ */
+		background:         linear-gradient(to bottom, #ffffff 0%,#efefef 99%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+		   -moz-box-shadow: 1px 1px #e8e8e8;
+		-webkit-box-shadow: 1px 1px #e8e8e8;
+				box-shadow: 1px 1px #e8e8e8;		
+	}
+
+	.product-boxes .product-text {
+		font: 14px/19px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+		color: #222222;
+	}
+
+	.product-boxes h3 span	{
+		font: bold 21px/27px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+		text-decoration: underline;
+		color: #369;
+		margin: 5px 0;
+	}
+
+	.product-boxes sup {
+		font: normal 10px arial;
+		vertical-align: super;
+		text-decoration: none;
+		color: #999;
+	}
+
+	.product-boxes h4 {
+		font: bold normal 14px/27px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+		color:#cc0000;
+	}
+
+	
+	
+.signal-product span {
+	text-decoration: none;
+}
+
+/*Footer*/
+footer hr{
+	background: url(images/img-hr.png) no-repeat top center;
+	width: 72px;
+	height: 12px;
+	display: block;
+	margin: 30px auto;
+	border: none;
+
+}
+
+/*jQuery related-objects to hide*/
+.fixed-ref {
+	display: none;
+	text-align: center;
+	width: 850px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.fixed-ref h1  {
+	clear: both;
+	height: auto;
+	width: 825px;
+	/*margin: 10px auto;*/
+	padding: 5px;
+	font: 46px/46px  'CrimsonSemibold', 'Times New Roman' Georgia, serif;
+	font-weight: 100; 
+	font-style: normal;
+	text-align: center;
+	line-height: 1.0em;
+	letter-spacing: -1px;
+}
+
+.fixed-ref h3 {
+	font-family: 'Lucida Sans Unicode', Verdana, sans-serif;
+	font-size: 15px;
+	width: inherit;
+	margin: auto;
+}
+
+.fixed-ref .linked-header {
+	color:#336699;
+	text-decoration: underline;
+}
+
+
+
+.arrow {
+		background: url(images/arrow-left.png);
+		background-repeat: no-repeat;
+		position: relative;
+		display: none;
+		height: 69px;
+		width: 69px;
+	}
+
+	a:hover .arrow {
+		display: block;
+	}
+
+	#box-bc .arrow, #box-hr .arrow{
+		top: -240px;
+		left: 140px;	
+	}
+
+	#box-cf .arrow {
+		top: -240px;
+		right: 40px;
+		-moz-transform: scaleX(-1);
+		  -o-transform: scaleX(-1);
+	 -webkit-transform: scaleX(-1);
+	         transform: scaleX(-1);
+					  filter:FlipH;
+				-ms-filter:"FlipH";	
+	}
