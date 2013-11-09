@@ -33,5 +33,5 @@ $(function () {
             prev_guess = guess;
         }
     };
-   game();
+   // game();
 });
