@@ -58,4 +58,8 @@ html {
 	src: local('CrimsonSemibold'), url("CrimsonSemibold.otf") format("opentype");
 	/*font-weight: bold;*/
 }
-/*header*/
+
+/*begin style*/
+input#guess {
+	width:20px;
+}
