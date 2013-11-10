@@ -20,7 +20,9 @@ $(function () {
             
             if (Math.abs(answer-guess) < Math.abs(answer - prev_guess)) {
                 msg = "You're getting warmer!";
-            }else {
+            }else if(Math.abs(answer-guess) == Math.abs(answer - prev_guess)) {
+                msg = "You're neither warmer nor colder ;-)";
+            } else {
                 msg = "You're getting colder!";
             }
         }
