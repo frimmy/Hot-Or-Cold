@@ -37,13 +37,21 @@ $(function () {
         return msg;
     };
    // game();
+
    /*create event on hitting enter or submitting a guess*/
-    $('#enterGuess').click(function(){
-        // alert('handler for .click() called.');
+   $('form').submit(function(e){
+        
+
         player_guess =  Number($('#guess').val());
         $('#output').html(game(player_guess));
         console.log(player_guess);
         return false;
+   });
+
+    $('#enterGuess').click(function(){
+        // alert('handler for .click() called.');
+        
+        // return false;
     });
 
 });
