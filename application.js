@@ -3,9 +3,9 @@ $(function () {
    var answer = Math.floor(101*Math.random());
    console.log("Answer is " + answer);
    var wrong = true;
-   var prev_guess, msg, player_guess;
+   var prev_guess, msg;
       
-   console.log(player_guess);
+   // console.log(player_guess);
 
    var game = function(guess){
 
@@ -40,18 +40,13 @@ $(function () {
 
    /*create event on hitting enter or submitting a guess*/
    $('form').submit(function(e){
-        
 
-        player_guess =  Number($('#guess').val());
-        $('#output').html(game(player_guess));
-        console.log(player_guess);
+        $('#output').html(game(Number($('#guess').val())));
+        console.log(Number($('#guess').val()));
+
+        //prevent default action
         return false;
+        // if(event.preventDefault) event.preventDefault();
    });
-
-    $('#enterGuess').click(function(){
-        // alert('handler for .click() called.');
-        
-        // return false;
-    });
 
 });
