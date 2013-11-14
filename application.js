@@ -50,5 +50,10 @@ $(function () {
         return false;
         // if(event.preventDefault) event.preventDefault();
    });
+   $('#newGame').on('click',function(){
+        $('#output').html('Ready to Play?');
+        answer = Math.floor(101*Math.random());
+        prev_guess = null;
+   });
 
 });
