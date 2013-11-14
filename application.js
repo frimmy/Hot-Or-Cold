@@ -42,7 +42,9 @@ $(function () {
    $('form').submit(function(e){
 
         $('#output').html(game(Number($('#guess').val())));
-        console.log(Number($('#guess').val()));
+        // console.log(Number($('#guess').val()));
+        $('#guess').val("");
+
 
         //prevent default action
         return false;
