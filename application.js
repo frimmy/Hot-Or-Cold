@@ -40,6 +40,7 @@ $(function () {
 
    /*create event on hitting enter or submitting a guess*/
    $('form').submit(function(){
+        event.preventDefault;
         console.log($player_guess.val());
         $('#output').html(game(Number($player_guess.val())));
         // console.log(Number($('#guess').val()));
@@ -52,6 +53,7 @@ $(function () {
         // if(event.preventDefault) event.preventDefault();
    });
    $('#newGame').on('click',function(){
+        event.preventDefault;
         $('#output').html('Ready to Play?');
         answer = Math.floor(101*Math.random());
         prev_guess = null;
