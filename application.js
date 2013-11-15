@@ -4,8 +4,8 @@ $(function () {
    console.log("Answer is " + answer);
    var wrong = true;
    var prev_guess, msg;
-      
-   // console.log(player_guess);
+   var $player_guess = $('#guess');
+   var $previousGuesses = $('div .PreviousGuesses');
 
    var game = function(guess){
 
@@ -39,14 +39,15 @@ $(function () {
    // game();
 
    /*create event on hitting enter or submitting a guess*/
-   $('form').submit(function(e){
-
-        $('#output').html(game(Number($('#guess').val())));
+   $('form').submit(function(){
+        console.log($player_guess.val());
+        $('#output').html(game(Number($player_guess.val())));
         // console.log(Number($('#guess').val()));
-        $('#guess').val("");
+        // $('#guess').val("");
+        $('div .PreviousGuesses').append($player_guess.val()+' ');
+        
+        
 
-
-        //prevent default action
         return false;
         // if(event.preventDefault) event.preventDefault();
    });
@@ -54,6 +55,7 @@ $(function () {
         $('#output').html('Ready to Play?');
         answer = Math.floor(101*Math.random());
         prev_guess = null;
+        $previousGuesses.text('');
    });
 
 });

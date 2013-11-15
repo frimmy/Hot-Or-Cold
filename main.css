@@ -85,11 +85,11 @@ header h1{
 	text-align: center;
 }
 
-.content .gamespace form  {
+.content .gamespace form{
 	width: 800px;
 	padding: 5px;
 	display: block;
-	margin: auto;
+	margin: 00px auto;
 	font:bold normal 12px/40px 'Helvetica' sans-serif;
 	text-align: center;
 }
