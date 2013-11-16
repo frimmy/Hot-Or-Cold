@@ -7,7 +7,19 @@ $(function () {
    var $player_guess = $('#guess');
    var $previousGuesses = $('div .PreviousGuesses');
 
-   var game = function(guess){
+   $('form').submit(function(){
+        
+        $('#output').html(
+            game(Number($player_guess.val())
+        )
+    );
+        $('div .PreviousGuesses').append($player_guess.val()+' ');
+        return false;
+   });
+
+   $('#newGame').on('click',newGame);
+
+   function game(guess){
 
         if (guess==answer) {
             msg = "Congrats! You win.";
@@ -35,29 +47,17 @@ $(function () {
 
         prev_guess = guess;
         return msg;
-    };
+    }
    // game();
-
-   /*create event on hitting enter or submitting a guess*/
-   $('form').submit(function(){
-        event.preventDefault;
-        console.log($player_guess.val());
-        $('#output').html(game(Number($player_guess.val())));
-        // console.log(Number($('#guess').val()));
-        // $('#guess').val("");
-        $('div .PreviousGuesses').append($player_guess.val()+' ');
-        
-        
-
-        return false;
-        // if(event.preventDefault) event.preventDefault();
-   });
-   $('#newGame').on('click',function(){
+   
+   function newGame(){
         event.preventDefault;
         $('#output').html('Ready to Play?');
         answer = Math.floor(101*Math.random());
         prev_guess = null;
         $previousGuesses.text('');
-   });
+   }
+   /*create event on hitting enter or submitting a guess*/
+   
 
 });
