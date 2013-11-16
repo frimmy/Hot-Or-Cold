@@ -13,7 +13,7 @@ $(function () {
             game(Number($playerGuess.val())
         )
     );
-        $('div .PreviousGuesses').append($playerGuess.val()+' ');
+        $previousGuesses.append($playerGuess.val()+' ');
         return false;
    });
 
@@ -27,19 +27,18 @@ $(function () {
 
         } else if (guess == prevGuess) {
             msg = "You just guessed that number..";
-        }
-        else if(prevGuess!= null) {
+        } else if (prevGuess!= null) {
             
             if (Math.abs(answer-guess) < Math.abs(answer - prevGuess)) {
                 msg = "You're getting warmer!";
-            }else if(Math.abs(answer-guess) == Math.abs(answer - prevGuess)) {
+            } else if (Math.abs(answer-guess) == Math.abs(answer - prevGuess)) {
                 msg = "You're neither warmer nor colder ;-)";
             } else {
                 msg = "You're getting colder!";
             }
         }
 
-        else if(guess>answer) {
+        else if (guess>answer) {
             msg = "Too high!";
         } else {
             msg = "Too low!";
@@ -50,7 +49,7 @@ $(function () {
     }
    // game();
    
-   function newGame(){
+   function newGame(event){
         event.preventDefault;
         $('#output').html('Ready to Play?');
         answer = Math.floor(101*Math.random());
