@@ -51,6 +51,7 @@ $(function () {
    
    function newGame(event){
         event.preventDefault;
+        $playerGuess.val('');     
         $('#output').html('Ready to Play?');
         answer = Math.floor(101*Math.random());
         prevGuess = null;
